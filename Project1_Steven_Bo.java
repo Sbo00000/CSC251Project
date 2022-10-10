@@ -68,11 +68,11 @@ public class Project1_Steven_Bo
             //keep track of smokers and non-smokers
             if(policies.get(i).getSmoke().equalsIgnoreCase("non-smoker"))
             {
-               numOfNonSmoker++;
+               numOfNonSmoker++;//Add non-smoker
             }
             else if(policies.get(i).getSmoke().equalsIgnoreCase("smoker"))
             {
-               numOfSmoker++;
+               numOfSmoker++;//Add smoker
             }
          }//Close loop
          
