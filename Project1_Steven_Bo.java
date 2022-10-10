@@ -53,7 +53,7 @@ public class Project1_Steven_Bo
          
          for(int i = 0; i < policies.size(); i++)
          {
-            // Print out everything
+            // Print out everything including bmi and price
             System.out.println("\nPolicy Number:" + policies.get(i).getNum());
             System.out.println("Provider Name:" + policies.get(i).getProvider());
             System.out.println("Policyholder's First Name:" + policies.get(i).getFirst());
