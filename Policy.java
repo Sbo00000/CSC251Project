@@ -5,7 +5,9 @@ public class Policy
    private double height, weight, bmi = 0.0;
    private String firstNam, lastNam, smokStat, provider;
    
-   //No-Arg constructor
+   /**
+      No-Arg Constructor
+   */
    public PolicyHolder()
    {
       age = 0;
@@ -18,7 +20,17 @@ public class Policy
       provider = "";
    }
    
-   // Constructor
+   /**
+      Constructor that accepts argument for each field
+      @param first The first name
+      @param last for the last name 
+      @param polAge for the age
+      @param smoke for the smokStat
+      @param polHeight for the height
+      @param polWeight for the weight
+      @param polNum for the num
+      @param polProvider for the provider
+   */
    public PolicyHolder(String first, String last, int polAge, String smoke, double polHeight, double polWeight, int polNum,)
    {
       firstNam = first;
@@ -30,6 +42,14 @@ public class Policy
       num = polNum;
       provider = polProvider;
    }
+   
+   //Setters
+   /**
+      Sets param to each field
+      @param num to polNum
+      @param provider to polProvider
+      @param policyHolder to policyholder
+   */
    
    public void setNum(int polNum)
    {
@@ -45,6 +65,12 @@ public class Policy
    }
    
    // Getters
+   /**
+      Constructor that accepts argument for each field
+      @return num
+      @return provider
+      @return policyholder
+   */
    public int getNum()
    {
       return num;
