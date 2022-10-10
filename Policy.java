@@ -8,7 +8,7 @@ public class Policy
    /**
       No-Arg Constructor
    */
-   public PolicyHolder()
+   public Policy()
    {
       age = 0;
       num = 0;
@@ -31,7 +31,7 @@ public class Policy
       @param polNum for the num
       @param polProvider for the provider
    */
-   public PolicyHolder(String first, String last, int polAge, String smoke, double polHeight, double polWeight, int polNum,)
+   public Policy(String first, String last, int polAge, String smoke, double polHeight, double polWeight, int polNum,)
    {
       firstNam = first;
       lastNam = last;
