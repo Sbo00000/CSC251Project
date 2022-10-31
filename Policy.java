@@ -47,13 +47,13 @@ public class Policy
    public double getTotal()
    {
       double bmiCalc = 0;
-      double total = 500;
+      double total = 600;
       double addFee = 0;
       
-      bmiCalc = bmi - 40;
+      bmiCalc = bmi - 35;
       addFee = bmiCalc * 50;
       
-      if (age > 50)
+      if (age > 75)
       {
          total = total + 50;
       }
