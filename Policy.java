@@ -1,56 +1,20 @@
 public class Policy
 {
    // Fields
-   private int age, num;
-   private double height, weight, bmi = 0.0;
-   private String firstNam, lastNam, smokStat, provider;
+   private int num;
+   private String provider;
+   private double bmi = 0;
+   private PolicyHolder policyholder;
    
-   /**
-      No-Arg Constructor
-   */
-   public Policy()
+   public Policy(int polNum, String polProvider)
    {
-      age = 0;
-      num = 0;
-      height = 0.0;
-      weight = 0.0;
-      firstNam = "";
-      lastNam = "";
-      smokStat = "";
-      provider = "";
-   }
-   
-   /**
-      Constructor that accepts argument for each field
-      @param first The first name
-      @param last for the last name 
-      @param polAge for the age
-      @param smoke for the smokStat
-      @param polHeight for the height
-      @param polWeight for the weight
-      @param polNum for the num
-      @param polProvider for the provider
-   */
-   public Policy(String first, String last, int polAge, String smoke, double polHeight, double polWeight, int polNum,)
-   {
-      firstNam = first;
-      lastNam = last;
-      age = polAge;
-      smokStat = smoke;
-      height = polHeight;
-      weight = polWeight;
       num = polNum;
       provider = polProvider;
+      // Use copy constructor to avoid security holes
+      policyholder = new PolicyHolder(holder);
    }
    
-   //Setters
-   /**
-      Sets param to each field
-      @param num to polNum
-      @param provider to polProvider
-      @param policyHolder to policyholder
-   */
-   
+   // Setters
    public void setNum(int polNum)
    {
       num = polNum;
@@ -65,12 +29,6 @@ public class Policy
    }
    
    // Getters
-   /**
-      Constructor that accepts argument for each field
-      @return num
-      @return provider
-      @return policyholder
-   */
    public int getNum()
    {
       return num;
@@ -89,21 +47,21 @@ public class Policy
    public double getTotal()
    {
       double bmiCalc = 0;
-      double total = 600;
+      double total = 500;
       double addFee = 0;
       
-      bmiCalc = (bmi * polWeight)/(polHeight^2);
-      addFee = (bmiCalc - 35) * 20;
+      bmiCalc = bmi - 40;
+      addFee = bmiCalc * 50;
       
       if (age > 50)
       {
-         total = total + 75;
+         total = total + 50;
       }
       if (smokStat.equalsIgnoreCase("smoker"))
       {
          total = total + 100;
       }
-      if (bmi > 35)
+      if (bmi > 40)
       {
          total = total + addFee;
       }
@@ -118,6 +76,5 @@ public class Policy
       "Policyholder's BMI:%.2f", bmi + 
       "\nPolicy Price:$%.2f", total);
    }
-   
    
 }
